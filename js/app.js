@@ -8,6 +8,11 @@ function adicionar() {
         alert('Informe o nome do amigo!');
         return;
     }
+    // validação para verificar se o nome existe na lista
+    if (amigos.includes(amigo.value)) {
+        alert('Nome consta na lista! Insira um nome diferente.');
+        return;
+    }
     let lista = document.getElementById('lista-amigos');
     amigos.push(amigo.value);
     if (lista.textContent == '') {
