@@ -22,6 +22,11 @@ function adicionar() {
 
 // função para sortear os nomes
 function sortear() {
+    // validar quantidade mínima de nomes para sorteio
+    if (amigos.length < 4) {
+        alert('Adicione pelo menos 4 amigos!');
+        return;
+    }
     embaralhar(amigos);
     let sorteio = document.getElementById('lista-sorteio');
     for (let i = 0; i < amigos.length; i++) {
